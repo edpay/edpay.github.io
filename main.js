@@ -358,13 +358,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'ed-pay-mdb';
+        this.title = 'ed-pay';
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
-            template: "\n      <app-header></app-header>\n      <main>\n        <div class=\"container-fluid ep-add-padding-top\">\n          <router-outlet></router-outlet>\n        </div>\n        </main>\n      <app-footer></app-footer>\n  ",
-            styles: ["\n    .ep-add-padding-top {\n      padding-top: 70px;\n    }\n  "]
+            template: "\n      <app-header></app-header>\n      <main>\n        <div class=\"container-fluid ep-add-padding\">\n          <router-outlet></router-outlet>\n        </div>\n        </main>\n      <app-footer></app-footer>\n  ",
+            styles: ["\n    .ep-add-padding {\n      padding-top: 70px;\n      padding-bottom: 20px;\n    }\n  "]
         })
     ], AppComponent);
     return AppComponent;
@@ -387,13 +387,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
-/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
+/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
+/* harmony import */ var _components_searchbox_searchbox_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/searchbox/searchbox.component */ "./src/app/components/searchbox/searchbox.component.ts");
+
+
+
 
 
 
@@ -410,19 +416,22 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _components_header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"],
-                _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
-                _components_about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"],
+                _components_about_about_component__WEBPACK_IMPORTED_MODULE_11__["AboutComponent"],
+                _components_searchbox_searchbox_component__WEBPACK_IMPORTED_MODULE_12__["SearchboxComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["NavbarModule"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["WavesModule"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["ButtonsModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MDBBootstrapModule"].forRoot()
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
             schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["NO_ERRORS_SCHEMA"]]
         })
     ], AppModule);
@@ -496,7 +505,7 @@ var AboutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Footer -->\n<footer class=\"page-footer font-small bg-primary pt-4\">\n\n  <!-- Footer Text -->\n  <div class=\"container-fluid text-center text-md-left\">\n\n    <!-- Grid row -->\n    <div class=\"row\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-6 mt-md-0 mt-3\">\n\n        <!-- Content -->\n        <h5 class=\"text-uppercase font-weight-bold\">Footer text 1</h5>\n        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat. Itaque, culpa?</p>\n\n      </div>\n      <!-- Grid column -->\n\n      <hr class=\"clearfix w-100 d-md-none pb-3\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-6 mb-md-0 mb-3\">\n\n        <!-- Content -->\n        <h5 class=\"text-uppercase font-weight-bold\">Footer text 2</h5>\n        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi hic.</p>\n\n      </div>\n      <!-- Grid column -->\n\n    </div>\n    <!-- Grid row -->\n\n  </div>\n  <!-- Footer Text -->\n\n  <!-- Copyright -->\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\n    <a routerLink='/'>EdPay</a>\n  </div>\n  <!-- Copyright -->\n\n</footer>\n<!-- Footer -->"
+module.exports = "<!-- Footer -->\n<footer class=\"page-footer font-small amber darken-4 pt-4\">\n\n  <!-- Footer Text -->\n  <div class=\"container-fluid text-center text-md-left\">\n\n    <!-- Grid row -->\n    <div class=\"row\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-6 mt-md-0 mt-3\">\n\n        <!-- Content -->\n        <h5 class=\"text-uppercase font-weight-bold\">Footer text 1</h5>\n        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat. Itaque, culpa?</p>\n\n      </div>\n      <!-- Grid column -->\n\n      <hr class=\"clearfix w-100 d-md-none pb-3\">\n\n      <!-- Grid column -->\n      <div class=\"col-md-6 mb-md-0 mb-3\">\n\n        <!-- Content -->\n        <h5 class=\"text-uppercase font-weight-bold\">Footer text 2</h5>\n        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi hic.</p>\n\n      </div>\n      <!-- Grid column -->\n\n    </div>\n    <!-- Grid row -->\n\n  </div>\n  <!-- Footer Text -->\n\n  <!-- Copyright -->\n  <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\n    <a routerLink='/'>EdPay</a>\n  </div>\n  <!-- Copyright -->\n\n</footer>\n<!-- Footer -->"
 
 /***/ }),
 
@@ -552,7 +561,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark bg-primary fixed-top scrolling-navbar\">\n    <mdb-navbar-brand>\n      <a routerLink='/' class=\"navbar-brand\">\n        <!-- <img src=\"\" height=\"30\" class=\"d-inline-block align-top\" alt=\"Ed Pay\"> -->\n        EdPay\n      </a>\n    </mdb-navbar-brand>\n    <links>\n        <ul class=\"navbar-nav\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link waves-light\" routerLink='/' mdbWavesEffect>Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link waves-light\" routerLink='/about' mdbWavesEffect>About</a>\n            </li>\n        </ul>\n    </links>\n</mdb-navbar>"
+module.exports = "<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark amber darken-4 fixed-top scrolling-navbar\">\n    <mdb-navbar-brand>\n      <a routerLink='/' class=\"navbar-brand\">\n        <!-- <img src=\"\" height=\"30\" class=\"d-inline-block align-top\" alt=\"Ed Pay\"> -->\n        EdPay\n      </a>\n    </mdb-navbar-brand>\n    <links>\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link waves-light\" routerLink='/' mdbWavesEffect>Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link waves-light\" routerLink='/about' mdbWavesEffect>About</a>\n            </li>\n        </ul>\n        <div class=\"navbar-nav\">\n        <a class=\"nav-link waves-light white-text \" data-toggle=\"modal\" data-target=\"#basicExample\"\n                (click)=\"frame.show()\" mdbWavesEffect>Login</a></div>\n    </links>\n</mdb-navbar>\n\n<!-- START Sign In Modal -->\n<div mdbModal #frame=\"mdbModal\" class=\"modal fade top\" id=\"frameModalTop\" tabindex=\"-1\" role=\"dialog\"\n  aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <!--Content-->\n    <div class=\"modal-content form-elegant\">\n      <!--Header-->\n      <div class=\"modal-header text-center\">\n        <h3 class=\"modal-title w-100 dark-grey-text font-weight-bold my-3\" id=\"myModalLabel\">\n          <strong>Sign in</strong>\n        </h3>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" (click)=\"frame.hide()\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <!--Body-->\n      <div class=\"modal-body mx-4\">\n        <!--Body-->\n        <div class=\"md-form mb-5\">\n          <input type=\"email\" id=\"Form-email1\" class=\"form-control\" mdbInputDirective [formControl]=\"modalFormElegantEmail\">\n          <label data-error=\"wrong\" data-success=\"right\" for=\"Form-email1\">Your email</label>\n        </div>\n\n        <div class=\"md-form pb-3\">\n          <input type=\"password\" id=\"Form-pass1\" class=\"form-control\" mdbInputDirective [formControl]=\"modalFormElegantPassword\">\n          <label data-error=\"wrong\" data-success=\"right\" for=\"Form-pass1\">Your password</label>\n          <p class=\"font-small blue-text d-flex justify-content-end\">Forgot\n            <a href=\"#\" class=\"blue-text ml-1\"> Password?</a>\n          </p>\n        </div>\n\n        <div class=\"text-center mb-3\">\n          <button type=\"button\" mdbBtn  block=\"true\" rounded=\"true\" class=\"z-depth-1a waves-light amber darken-4\"\n            mdbWavesEffect>Sign in</button>\n        </div>\n        <!-- <p class=\"font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2\"> or Sign in\n          with:</p>\n\n        <div class=\"row my-3 d-flex justify-content-center\">\n          <button type=\"button\" mdbBtn color=\"white\" rounded=\"true\" class=\"mr-md-3 z-depth-1a waves-light\"\n            mdbWavesEffect>\n            <i class=\"fa fa-facebook text-center\"></i>\n          </button>\n          <button type=\"button\" mdbBtn color=\"white\" rounded=\"true\" class=\"mr-md-3 z-depth-1a waves-light\"\n            mdbWavesEffect>\n            <i class=\"fa fa-twitter\"></i>\n          </button>\n          <button type=\"button\" mdbBtn color=\"white\" rounded=\"true\" class=\"z-depth-1a waves-light\"\n            mdbWavesEffect>\n            <i class=\"fa fa-google-plus\"></i>\n          </button>\n        </div> -->\n      </div>\n      <!--Footer-->\n      <div class=\"modal-footer mx-5 pt-3 mb-1\">\n        <p class=\"font-small grey-text d-flex justify-content-end\">Not a member?\n          <a href=\"#\" class=\"blue-text ml-1\"> Sign Up</a>\n        </p>\n      </div>\n    </div>\n    <!--/.Content-->\n  </div>\n</div>\n<!-- END Sign In Modal -->"
 
 /***/ }),
 
@@ -563,7 +572,7 @@ module.exports = "<mdb-navbar SideClass=\"navbar navbar-expand-lg navbar-dark bg
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = ".form-elegant .font-small {\n  font-size: 0.8rem; }\n\n.form-elegant .z-depth-1a {\n  box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }\n\n.form-elegant .z-depth-1-half,\n.form-elegant .btn:hover {\n  box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }\n\n.form-elegant .modal-header {\n  border-bottom: none; }\n\n.modal-dialog .form-elegant .btn .fa {\n  color: #2196f3 !important; }\n\n.form-elegant .modal-body,\n.form-elegant .modal-footer {\n  font-weight: 400; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWFkZXIvQzpcXFVzZXJzXFxTcmluaXZhc1xcRGVza3RvcFxcUHJvamVjdFxcZWQtcGF5LW1kYi9zcmNcXGFwcFxcY29tcG9uZW50c1xcaGVhZGVyXFxoZWFkZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBaUIsRUFDcEI7O0FBRUQ7RUFFSSx5RkFBd0YsRUFDM0Y7O0FBRUQ7O0VBR0kseUZBQXdGLEVBQzNGOztBQUVEO0VBQ0ksb0JBQW1CLEVBQ3RCOztBQUVEO0VBQ0ksMEJBQXlCLEVBQzVCOztBQUVEOztFQUVJLGlCQUFnQixFQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb3JtLWVsZWdhbnQgLmZvbnQtc21hbGwge1xyXG4gICAgZm9udC1zaXplOiAwLjhyZW07XHJcbn1cclxuXHJcbi5mb3JtLWVsZWdhbnQgLnotZGVwdGgtMWEge1xyXG4gICAgLXdlYmtpdC1ib3gtc2hhZG93OiAwIDJweCA1cHggMCByZ2JhKDU1LCAxNjEsIDI1NSwgMC4yNiksIDAgNHB4IDEycHggMCByZ2JhKDEyMSwgMTU1LCAyNTQsIDAuMjUpO1xyXG4gICAgYm94LXNoYWRvdzogMCAycHggNXB4IDAgcmdiYSg1NSwgMTYxLCAyNTUsIDAuMjYpLCAwIDRweCAxMnB4IDAgcmdiYSgxMjEsIDE1NSwgMjU0LCAwLjI1KTtcclxufVxyXG5cclxuLmZvcm0tZWxlZ2FudCAuei1kZXB0aC0xLWhhbGYsXHJcbi5mb3JtLWVsZWdhbnQgLmJ0bjpob3ZlciB7XHJcbiAgICAtd2Via2l0LWJveC1zaGFkb3c6IDAgNXB4IDExcHggMCByZ2JhKDg1LCAxODIsIDI1NSwgMC4yOCksIDAgNHB4IDE1cHggMCByZ2JhKDM2LCAxMzMsIDI1NSwgMC4xNSk7XHJcbiAgICBib3gtc2hhZG93OiAwIDVweCAxMXB4IDAgcmdiYSg4NSwgMTgyLCAyNTUsIDAuMjgpLCAwIDRweCAxNXB4IDAgcmdiYSgzNiwgMTMzLCAyNTUsIDAuMTUpO1xyXG59XHJcblxyXG4uZm9ybS1lbGVnYW50IC5tb2RhbC1oZWFkZXIge1xyXG4gICAgYm9yZGVyLWJvdHRvbTogbm9uZTtcclxufVxyXG5cclxuLm1vZGFsLWRpYWxvZyAuZm9ybS1lbGVnYW50IC5idG4gLmZhIHtcclxuICAgIGNvbG9yOiAjMjE5NmYzICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5mb3JtLWVsZWdhbnQgLm1vZGFsLWJvZHksXHJcbi5mb3JtLWVsZWdhbnQgLm1vZGFsLWZvb3RlciB7XHJcbiAgICBmb250LXdlaWdodDogNDAwO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -579,10 +588,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
 
 
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent() {
+        this.loginFormModalEmail = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email);
+        this.loginFormModalPassword = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required);
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
@@ -608,7 +621,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page\" *ngFor=\"let page of pages\"></div>"
+module.exports = "<!-- <div class=\"page\" *ngFor=\"let page of pages\"></div> -->\r\n\r\n<div class=\"card card-image amber darken-4\">\r\n    <div class=\"text-white text-center py-3 px-2 my-4\">\r\n      <div style=\"align-items: center;\">\r\n        <h2 class=\"card-title h1-responsive pt-3 mb-5 font-bold\"><strong>Take your next big step.</strong></h2>\r\n        <!-- <form class=\"form-inline md-form form-sm amber darken-4\"> -->\r\n            <app-searchbox></app-searchbox>\r\n        <!-- </form> -->\r\n\r\n      </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -639,7 +652,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
-        this.pages = new Array(10);
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
@@ -647,11 +659,68 @@ var HomeComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-home',
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/components/home/home.component.html"),
+            providers: [],
             styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/components/home/home.component.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/searchbox/searchbox.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/searchbox/searchbox.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n  <div class=\"ep_searchbox_block\">\n    <input type=\"text\" placeholder='Search for your institution' class=\"ep_searchbox_input\">\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/searchbox/searchbox.component.scss":
+/*!***************************************************************!*\
+  !*** ./src/app/components/searchbox/searchbox.component.scss ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".ep_searchbox_block {\n  margin: 0 auto;\n  max-width: 1000px; }\n\n.ep_searchbox_input {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  font: 15px/1 'Open Sans', sans-serif;\n  color: #333;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  width: 100%;\n  max-width: 700px;\n  background-color: #ddd;\n  border: none;\n  padding: 10px 11px 11px 11px;\n  border-radius: 3px;\n  box-shadow: none;\n  outline: none;\n  margin: 0;\n  box-sizing: border-box; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zZWFyY2hib3gvQzpcXFVzZXJzXFxTcmluaXZhc1xcRGVza3RvcFxcUHJvamVjdFxcZWQtcGF5LW1kYi9zcmNcXGFwcFxcY29tcG9uZW50c1xcc2VhcmNoYm94XFxzZWFyY2hib3guY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFRSxlQUFjO0VBQ2Qsa0JBQWlCLEVBQ2xCOztBQUNEO0VBRUUseUJBQXdCO0VBQ3hCLHNCQUFxQjtFQUNyQixpQkFBZ0I7RUFDaEIscUNBQW9DO0VBQ3BDLFlBQVc7RUFDWCxvQ0FBbUM7RUFDbkMsbUNBQWtDO0VBQ2xDLFlBQVc7RUFDWCxpQkFBZ0I7RUFDaEIsdUJBQXNCO0VBQ3RCLGFBQVk7RUFDWiw2QkFBNEI7RUFDNUIsbUJBQWtCO0VBQ2xCLGlCQUFnQjtFQUNoQixjQUFhO0VBQ2IsVUFBUztFQUNULHVCQUFzQixFQUN2QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2VhcmNoYm94L3NlYXJjaGJveC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5lcF9zZWFyY2hib3hfYmxvY2tcclxue1xyXG4gIG1hcmdpbjogMCBhdXRvO1xyXG4gIG1heC13aWR0aDogMTAwMHB4OyBcclxufVxyXG4uZXBfc2VhcmNoYm94X2lucHV0XHJcbntcclxuICAtd2Via2l0LWFwcGVhcmFuY2U6IG5vbmU7XHJcbiAgLW1vei1hcHBlYXJhbmNlOiBub25lO1xyXG4gIGFwcGVhcmFuY2U6IG5vbmU7XHJcbiAgZm9udDogMTVweC8xICdPcGVuIFNhbnMnLCBzYW5zLXNlcmlmO1xyXG4gIGNvbG9yOiAjMzMzO1xyXG4gIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgbWF4LXdpZHRoOiA3MDBweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xyXG4gIGJvcmRlcjogbm9uZTtcclxuICBwYWRkaW5nOiAxMHB4IDExcHggMTFweCAxMXB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDNweDtcclxuICBib3gtc2hhZG93OiBub25lO1xyXG4gIG91dGxpbmU6IG5vbmU7XHJcbiAgbWFyZ2luOiAwO1xyXG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7IFxyXG59XHJcbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/searchbox/searchbox.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/searchbox/searchbox.component.ts ***!
+  \*************************************************************/
+/*! exports provided: SearchboxComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchboxComponent", function() { return SearchboxComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var SearchboxComponent = /** @class */ (function () {
+    function SearchboxComponent() {
+    }
+    SearchboxComponent.prototype.ngOnInit = function () {
+    };
+    SearchboxComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-searchbox',
+            template: __webpack_require__(/*! ./searchbox.component.html */ "./src/app/components/searchbox/searchbox.component.html"),
+            styles: [__webpack_require__(/*! ./searchbox.component.scss */ "./src/app/components/searchbox/searchbox.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], SearchboxComponent);
+    return SearchboxComponent;
 }());
 
 
